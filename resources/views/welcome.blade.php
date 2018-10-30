@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Chat app</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="{{ asset('js/app.js') }}"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -64,7 +65,7 @@
             }
         </style>
     </head>
-    <body>
+    <body >
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -77,16 +78,13 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div id="app" class="content">
                 <div class="title m-b-md">
-                    Chat-talk
+                    <a href="/home">Chat-talk</a>
                 </div>
 
               <div class="container">
-                   <div class="row justify-content-center">
-                        <chat-component></chat-component>
-                        <user-component></user-component>
-                   </div>
+
             </div>
             </div>
         </div>
